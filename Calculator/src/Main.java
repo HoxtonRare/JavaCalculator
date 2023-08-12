@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
@@ -59,6 +60,14 @@ public class Main {
             nums[i] = nums[i].replaceAll(" ", "");
         }
 
+        try {
+            num1 = Integer.parseInt(nums[0]);
+            num2 = Integer.parseInt(nums[1]);
+        } catch (NumberFormatException e){
+            System.out.println("Введено неверное число");
+            System.exit(3);
+        }
+
         num1 = Integer.parseInt(nums[0]);
         num2 = Integer.parseInt(nums[1]);
 
@@ -67,7 +76,7 @@ public class Main {
                 throw new IOException();
             } catch (IOException e){
                 System.out.println("Введено неверное число");
-                System.exit(3);
+                System.exit(4);
             }
         }
 
