@@ -71,7 +71,7 @@ public class Main {
         num1 = Integer.parseInt(nums[0]);
         num2 = Integer.parseInt(nums[1]);
 
-        if (num1 < 0 || num1 > 10 || num2 < 0 || num2 > 10){
+        if (num1 < 1 || num1 > 10 || num2 < 1 || num2 > 10){
             try {
                 throw new IOException();
             } catch (IOException e){
